@@ -22,6 +22,17 @@ no_headers = pd.read_csv('peyton.csv', sep=',', header=None,
                          names=cols)
 
 # save dataframe to csv
-print(no_headers.head())
+# print(no_headers.head())
 no_headers.to_csv('peyton_to_csv_format.csv')
 os.remove('peyton_to_csv_format.csv')
+
+# write to excel
+# use football to excel : pip install xlrd, openpyxl
+football.to_excel('football.xlsx', index=False)
+
+# get clipboard
+hank = pd.read_clipboard()
+
+print(hank.head())
+# store clipboard in csv
+hank.to_csv('soccer_20016_table.csv')
