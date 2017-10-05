@@ -35,4 +35,19 @@ hank = pd.read_clipboard()
 
 print(hank.head())
 # store clipboard in csv
-hank.to_csv('soccer_20016_table.csv')
+# hank.to_csv('soccer_20016_table.csv')
+
+# Access data frame.
+# use iloc
+print(football.iloc[0])
+
+# use loc for index 
+print(football.loc[:2]) # get first 2 elements
+print(football.loc[2:4]) # get elements from 2 to 4
+
+# add index
+print(football.index)
+modified_index = football.set_index('losses')
+print(modified_index.index)
+
+
