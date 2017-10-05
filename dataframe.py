@@ -45,9 +45,10 @@ print(football.iloc[0])
 print(football.loc[:2]) # get first 2 elements
 print(football.loc[2:4]) # get elements from 2 to 4
 
-# add index
+# set index
 print(football.index)
 modified_index = football.set_index('losses')
 print(modified_index.index)
 
-
+# add a row to dataframe
+modified_index.loc[9] = [2019,'Supra boyz',9, 4]
